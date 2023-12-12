@@ -10,7 +10,7 @@ const btn_styles = {
 
 export default function NavBar() {
   return (
-    <Flex as="nav" p="10px" alignItems={"center"}>
+    <Flex as="nav" p="10px" alignItems={"center"} mb={"50px"}>
       {"  "}
       <Spacer />
 
