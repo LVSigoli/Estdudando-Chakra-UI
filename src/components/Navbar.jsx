@@ -1,5 +1,13 @@
 import { Box, Button, Flex, HStack, Heading, Spacer, Text } from "@chakra-ui/react";
 
+const btn_styles = {
+  bg: "purple.400",
+  color: "white",
+  ":hover": {
+    bg: "purple.200",
+  },
+};
+
 export default function NavBar() {
   return (
     <Flex as="nav" p="10px" alignItems={"center"}>
@@ -11,7 +19,7 @@ export default function NavBar() {
           M
         </Box>
         <Text>mario@petads.dev.edu.br</Text>
-        <Button>Logout</Button>
+        <Button sx={btn_styles}>Logout</Button>
       </HStack>
     </Flex>
   );
