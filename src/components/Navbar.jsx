@@ -11,7 +11,7 @@ const btn_styles = {
 export default function NavBar() {
   return (
     <Flex as="nav" p="10px" alignItems={"center"}>
-      <Heading as="h1"> Learning Chakra Tasks</Heading>
+      {"  "}
       <Spacer />
 
       <HStack spacing={"20px"}>
