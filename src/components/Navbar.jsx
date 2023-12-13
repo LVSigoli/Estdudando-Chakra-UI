@@ -1,4 +1,4 @@
-import { Box, Button, Flex, HStack, Heading, Spacer, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, HStack, Heading, Spacer, Text, useToast } from "@chakra-ui/react";
 
 export const btn_styles = {
   bg: "purple.400",
@@ -9,6 +9,18 @@ export const btn_styles = {
 };
 
 export default function NavBar() {
+  const toast = useToast();
+
+  const showToast = () => {
+    toast({
+      title: "Logged out",
+      description: "Successfully loged out",
+      duration: 5000,
+      isClosable: true,
+      status: "success",
+      position: "top",
+    });
+  };
   return (
     <Flex as="nav" p="10px" alignItems={"center"} mb={"50px"}>
       {"  "}
@@ -19,7 +31,9 @@ export default function NavBar() {
           M
         </Box>
         <Text>mario@petads.dev.edu.br</Text>
-        <Button sx={btn_styles}>Logout</Button>
+        <Button onClick={showToast} sx={btn_styles}>
+          Logout
+        </Button>
       </HStack>
     </Flex>
   );
