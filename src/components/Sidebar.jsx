@@ -1,5 +1,5 @@
 import { AtSignIcon, CalendarIcon, EditIcon } from "@chakra-ui/icons";
-import { List, ListIcon, ListItem, Heading, Spacer } from "@chakra-ui/react";
+import { List, ListIcon, ListItem, Heading, Spacer, flexbox, Center } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 
 export default function Sidebar() {
@@ -10,7 +10,15 @@ export default function Sidebar() {
         Chakra Tasks
       </Heading>
 
-      <List color="white" fontSize={"1.2em"} spacing={4}>
+      <List
+        color="white"
+        fontSize={"1em"}
+        spacing={{ base: 0, lg: 4, xl: 4 }}
+        display={"flex"}
+        flexDir={{ base: "row", lg: "column", xl: "column" }}
+        alignItems={"center"}
+        justifyContent={"space-between"}
+      >
         <ListItem>
           <NavLink to="/">
             <ListIcon as={CalendarIcon} color={"white"} />
